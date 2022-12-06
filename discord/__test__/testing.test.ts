@@ -25,9 +25,8 @@ const testContext: Context = {
 
 describe("nice", () => {
   it("", async () => {
+    // TODO: atm this makes actual calls to ssm:param store.... soo maybe fix that at some point?
     const res = await handler(event as unknown as APIGatewayProxyEvent, testContext)
     expect(res).toEqual({});
   })
 })
-
-{"application_id":"1049056049795174451","id":"1049645924646916096","token":"aW50ZXJhY3Rpb246MTA0OTY0NTkyNDY0NjkxNjA5NjphamRnRTZlTXBUWlE0THM5OVg4aEV3Nk5vT2Y1c2lUbmpZNjRWTDdGdTJGd0RkUGhVNEtwcjcySXk0RldmNGQ2Wmt6d2RsOXVpS1lsQXVCOTNNWGZDcmdXTzI4aFlsSEpEVjBaTk1GRzJoZVNNWEd4bm5hVlFKbHp3ek45WWduNg","type":1,"user":{"avatar":"255ad7cc60922ad1bb3aac41ef70ddb0","avatar_decoration":null,"discriminator":"4448","id":"210328601231491072","public_flags":0,"username":"Yötyökyöpeli"},"version":1}
