@@ -14,10 +14,8 @@ _read_ the documentation instead of doing the normal head first dive. I've spent
 are not compatible... Oh well. Hopefully this realization propels me to new heights.
 
 In the end I managed to make the functions callable locally via `sam loval invkoe` so that's something. Still haven't
-tried
-to upload any functions to lambda though. I'll try to make the function handle a discord package, and then I'll upload
-one
-to try it with discord.
+tried to upload any functions to lambda though. I'll try to make the function handle a discord package, and
+then I'll upload one to try it with discord.
 
 Oh yeah. I also created a super simple script that'll update param store values. Not sure if I'll even need it now but
 hey. At least it exists.
