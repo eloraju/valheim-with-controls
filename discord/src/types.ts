@@ -144,33 +144,52 @@ export interface DiscordInteractionResponseData {
 }
 
 export interface DiscordCommandOptionChoice {
-  name: string; // string	1-100 character choice name
-  //name_localizations?: string; // ?dictionary with keys in available locales	Localization dictionary for the name field. Values follow the same restrictions as name
-  value: string | number; // string, integer, or double *	Value for the choice, up to 100 characters if string
+  // string	1-100 character choice name
+  name: string;
+  // ?dictionary with keys in available locales	Localization dictionary for the name field. Values follow the same restrictions as name
+  //name_localizations?: string;
+  // string, integer, or double *	Value for the choice, up to 100 characters if string
+  value: string | number;
 }
 
 export interface DiscordCommandOption {
-  type: DiscordCommandOptionType; // one of application command option type	Type of option
-  name: string; // string	1-32 character name
-  //name_localizations?: string; // ?dictionary with keys in available locales	Localization dictionary for the name field. Values follow the same restrictions as name
-  description: string; // string	1-100 character description
-  //description_localizations?: string; // ?dictionary with keys in available locales	Localization dictionary for the description field. Values follow the same restrictions as description
-  required?: boolean; // boolean	If the parameter is required or optional--default false
-  choices?: DiscordCommandOptionChoice[]; // array of application command option choice	Choices for STRING, INTEGER, and NUMBER types for the user to pick from, max 25
-  options?: DiscordCommandOption; // array of application command option	If the option is a subcommand or subcommand group type, these nested options will be the parameters
-  channel_types?: DiscordChannelType[]; // array of channel types	If the option is a channel type, the channels shown will be restricted to these types
-  min_value?: number; // integer for INTEGER options, double for NUMBER options	If the option is an INTEGER or NUMBER type, the minimum value permitted
-  max_value?: number; // integer for INTEGER options, double for NUMBER options	If the option is an INTEGER or NUMBER type, the maximum value permitted
-  min_length?: number; // integer	For option type STRING, the minimum allowed length (minimum of 0, maximum of 6000)
-  max_length?: number; // integer	For option type STRING, the maximum allowed length (minimum of 1, maximum of 6000)
-  autocomplete?: boolean; // boolean	If autocomplete interactions are enabled for this STRING, INTEGER, or NUMBER type option
+  // one of application command option type	Type of option
+  type: DiscordCommandOptionType;
+  // string	1-32 character name
+  name: string;
+  // ?dictionary with keys in available locales	Localization dictionary for the name field. Values follow the same restrictions as name
+  //name_localizations?: string;
+  // string	1-100 character description
+  description: string;
+  // ?dictionary with keys in available locales	Localization dictionary for the description field. Values follow the same restrictions as description
+  //description_localizations?: string;
+  // boolean	If the parameter is required or optional--default false
+  required?: boolean;
+  // array of application command option choice	Choices for STRING, INTEGER, and NUMBER types for the user to pick from, max 25
+  choices?: DiscordCommandOptionChoice[];
+  // array of application command option	If the option is a subcommand or subcommand group type, these nested options will be the parameters
+  options?: DiscordCommandOption;
+  // array of channel types	If the option is a channel type, the channels shown will be restricted to these types
+  channel_types?: DiscordChannelType[];
+  // integer for INTEGER options, double for NUMBER options	If the option is an INTEGER or NUMBER type, the minimum value permitted
+  min_value?: number;
+  // integer for INTEGER options, double for NUMBER options	If the option is an INTEGER or NUMBER type, the maximum value permitted
+  max_value?: number;
+  // integer	For option type STRING, the minimum allowed length (minimum of 0, maximum of 6000)
+  min_length?: number;
+  // integer	For option type STRING, the maximum allowed length (minimum of 1, maximum of 6000)
+  max_length?: number;
+   // boolean	If autocomplete interactions are enabled for this STRING, INTEGER, or NUMBER type option
+  autocomplete?: boolean;
 }
 
 export interface DiscordCommand {
   id?: string;
   type?: DiscordCommandType;
-  application_id?: string; // added at runtime
-  guild_id?: string; // added at runtime
+  // added at runtime
+  application_id?: string;
+  // added at runtime
+  guild_id?: string;
   name: string;
   //name_localizations?: string;
   description: string;

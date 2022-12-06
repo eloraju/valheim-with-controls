@@ -1,12 +1,12 @@
 import {DiscordCommandType, DiscordCommandWithHandler, DiscordInteraction, DiscordInteractionResponse,} from "../types";
 import {InteractionResponseType} from "discord-interactions";
-import axios from 'axios';
+import axios from '../helpers/axiosIns';
 
 export const stopCommand: DiscordCommandWithHandler = {
   name: "stop",
   type: DiscordCommandType.CHAT_INPUT,
   description: "Stops the server if there are no players",
-  handler: async function testHandler(interaction: DiscordInteraction): Promise<DiscordInteractionResponse> {
+  handler: async function stopHandler(interaction: DiscordInteraction): Promise<DiscordInteractionResponse> {
     const res = await axios.get("https://api.chucknorris.io/jokes/random")
     const joke = res.data.value
     return {
