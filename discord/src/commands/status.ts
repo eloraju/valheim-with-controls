@@ -2,7 +2,7 @@ import {DiscordCommandType, DiscordCommandWithHandler, DiscordInteraction, Disco
 import {InteractionResponseType} from "discord-interactions";
 import axios from 'axios';
 
-export const testCommand: DiscordCommandWithHandler = {
+export const statusCommand: DiscordCommandWithHandler = {
   name: "status",
   type: DiscordCommandType.CHAT_INPUT,
   description: "Reports the status of the server",

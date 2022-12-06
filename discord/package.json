@@ -10,7 +10,7 @@
     "test": "jest",
     "cdk:synth": "cdk synth",
     "updateParams": "export $(cat .env | sed -r 's/\\r//' | xargs) && sh bin/helpers/updateParamStore.sh",
-    "updateCommands": "ts-node bin/helpers/updateCommands.ts"
+    "updateCommands": "export $(cat .env | sed -r 's/\\\\r//' | xargs) && ts-node bin/helpers/updateCommands.ts"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.109",
