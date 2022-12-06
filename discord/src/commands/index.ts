@@ -11,4 +11,3 @@ const commands = new Map<string, DiscordCommandWithHandler>([
 ]);
 
 export default commands;
-

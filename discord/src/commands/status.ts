@@ -1,12 +1,12 @@
 import {DiscordCommandType, DiscordCommandWithHandler, DiscordInteraction, DiscordInteractionResponse,} from "../types";
 import {InteractionResponseType} from "discord-interactions";
-import axios from 'axios';
+import axios from '../helpers/axiosIns';
 
 export const statusCommand: DiscordCommandWithHandler = {
   name: "status",
   type: DiscordCommandType.CHAT_INPUT,
   description: "Reports the status of the server",
-  handler: async function testHandler(interaction: DiscordInteraction): Promise<DiscordInteractionResponse> {
+  handler: async function statusHandler(interaction: DiscordInteraction): Promise<DiscordInteractionResponse> {
     const res = await axios.get("https://api.chucknorris.io/jokes/random")
     const joke = res.data.value
     return {
