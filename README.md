@@ -23,4 +23,5 @@ hey. At least it exists.
 Last update for today. Managed to deploy everything to AWS woopwoop. Discord key validation aint working yet but that's
 tomorrow's problem.
 
-New day. Managed to make the whole thing work! Just added a test command that I'll try to call from discrod.
+New day. Managed to make the whole thing work! Just added a test command that I'll try to call from discord.
+Aaand it didn't work. For some reason discord doesn't accept the response. I'll figure this out later.
