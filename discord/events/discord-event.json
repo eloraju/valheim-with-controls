@@ -1,0 +1,117 @@
+{
+  "resource": "/handler",
+  "path": "/handler",
+  "httpMethod": "POST",
+  "headers": {
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-ASN": "396982",
+    "CloudFront-Viewer-Country": "US",
+    "content-type": "application/json",
+    "Host": "7nb64pn9g2.execute-api.eu-north-1.amazonaws.com",
+    "User-Agent": "Discord-Interactions/1.0 (+https://discord.com)",
+    "Via": "1.1 a33c43ec5f596f8992d13ecf79c120a4.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "3OwQnleYrfsPmHJXTSweSMdoq2H8etWAV-iiYOcLFhccnh_7-ZYy5g==",
+    "X-Amzn-Trace-Id": "Root=1-638f17eb-295f718b1d8008720d846816",
+    "X-Forwarded-For": "35.227.62.178, 130.176.92.152",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https",
+    "x-signature-ed25519": "58dfaccc75b1d11c4ff9226ce65440561b0e9f5251a5af473a37887504d7a2c65458b97a19a168c95e409f0611441e33eb9e11d5b0135c3567e1719831816908",
+    "x-signature-timestamp": "1670322155"
+  },
+  "multiValueHeaders": {
+    "CloudFront-Forwarded-Proto": [
+      "https"
+    ],
+    "CloudFront-Is-Desktop-Viewer": [
+      "true"
+    ],
+    "CloudFront-Is-Mobile-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-SmartTV-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-Tablet-Viewer": [
+      "false"
+    ],
+    "CloudFront-Viewer-ASN": [
+      "396982"
+    ],
+    "CloudFront-Viewer-Country": [
+      "US"
+    ],
+    "content-type": [
+      "application/json"
+    ],
+    "Host": [
+      "7nb64pn9g2.execute-api.eu-north-1.amazonaws.com"
+    ],
+    "User-Agent": [
+      "Discord-Interactions/1.0 (+https://discord.com)"
+    ],
+    "Via": [
+      "1.1 a33c43ec5f596f8992d13ecf79c120a4.cloudfront.net (CloudFront)"
+    ],
+    "X-Amz-Cf-Id": [
+      "3OwQnleYrfsPmHJXTSweSMdoq2H8etWAV-iiYOcLFhccnh_7-ZYy5g=="
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-638f17eb-295f718b1d8008720d846816"
+    ],
+    "X-Forwarded-For": [
+      "35.227.62.178, 130.176.92.152"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ],
+    "x-signature-ed25519": [
+      "58dfaccc75b1d11c4ff9226ce65440561b0e9f5251a5af473a37887504d7a2c65458b97a19a168c95e409f0611441e33eb9e11d5b0135c3567e1719831816908"
+    ],
+    "x-signature-timestamp": [
+      "1670322155"
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "47qauf",
+    "resourcePath": "/handler",
+    "httpMethod": "POST",
+    "extendedRequestId": "cuCszGLOgi0FWPg=",
+    "requestTime": "06/Dec/2022:10:22:35 +0000",
+    "path": "/prod/handler",
+    "accountId": "993022312856",
+    "protocol": "HTTP/1.1",
+    "stage": "prod",
+    "domainPrefix": "7nb64pn9g2",
+    "requestTimeEpoch": 1670322155315,
+    "requestId": "e996a610-89a7-4797-b236-c395369f9541",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "35.227.62.178",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "Discord-Interactions/1.0 (+https://discord.com)",
+      "user": null
+    },
+    "domainName": "7nb64pn9g2.execute-api.eu-north-1.amazonaws.com",
+    "apiId": "7nb64pn9g2"
+  },
+  "body": "{\"application_id\":\"1049056049795174451\",\"id\":\"1049631929961545760\",\"token\":\"aW50ZXJhY3Rpb246MTA0OTYzMTkyOTk2MTU0NTc2MDozVzVmaU5Vd1pJaWVKaEQ2bDVyZ1FSckFwVXJxNEg3bUMwbzh4WkNuYkhHaXMyZ3hjcHhleTJDREg1cVZlNUlTQldrVU5yY01PSmRob1I4QThIS3BpVGwzQXBUVTBmRnRLMkRwN3NKOVFNRWZwSDF3TXJ6Vm1pMmczTmJFeHdHdA\",\"type\":1,\"user\":{\"avatar\":\"255ad7cc60922ad1bb3aac41ef70ddb0\",\"avatar_decoration\":null,\"discriminator\":\"4448\",\"id\":\"210328601231491072\",\"public_flags\":0,\"username\":\"Yötyökyöpeli\"},\"version\":1}",
+  "isBase64Encoded": false
+}
