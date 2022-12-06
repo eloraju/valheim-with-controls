@@ -12,7 +12,7 @@ export const statusCommand: DiscordCommandWithHandler = {
     return {
       type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
       data: {
-        content: `Not implemented yet. Meanwhile you can enjoy this Chuck Norris choke.\n ${joke}`
+        content: `Not implemented yet. Meanwhile you can enjoy this Chuck Norris joke. ${joke}`
       }
     }
   }
