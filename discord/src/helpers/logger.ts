@@ -1,10 +1,13 @@
 export class Logger {
-  private readonly tag: string;
-  constructor() {
+  private  tag: string;
+  constructor() {}
+
+  private updateTimestamp() {
     this.tag = new Date().getTime().toString(16);
   }
 
   start() {
+    this.updateTimestamp();
     console.log(`==================== [${this.tag}] EVENT START ====================`);
   }
 

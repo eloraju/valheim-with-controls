@@ -1,5 +1,5 @@
 import * as event from '../events/discord-event.json';
-import {handler} from '../src/handler';
+import {valtsu} from '../src/valtsu';
 import {APIGatewayProxyEvent, Context} from "aws-lambda";
 
 const testContext: Context = {
@@ -26,7 +26,7 @@ const testContext: Context = {
 describe("nice", () => {
   it("", async () => {
     // TODO: atm this makes actual calls to ssm:param store.... soo maybe fix that at some point?
-    const res = await handler(event as unknown as APIGatewayProxyEvent, testContext)
+    const res = await valtsu(event as unknown as APIGatewayProxyEvent, testContext)
     expect(res).toEqual({});
   })
 })

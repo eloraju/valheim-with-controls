@@ -25,3 +25,9 @@ tomorrow's problem.
 
 New day. Managed to make the whole thing work! Just added a test command that I'll try to call from discord.
 Aaand it didn't work. For some reason discord doesn't accept the response. I'll figure this out later.
+
+Welp. Now it works. Just had to destroy and redeploy the whole thing. I call this a win.
+
+Did quite a lot of refactoring and started to work on a script that updates the commands to discords. Gribe also
+pointed out that lambda processing power is tied to the memory! I'll try to run the lambdas with a bit more memory
+to see if I can reduce the runtime.

@@ -13,12 +13,12 @@ export class CommandLambdasStack extends Stack {
       description: "This services handles the calls to the Valheim server control api sent from discord",
     });
 
-    const handlerLamba = new NodejsFunction(this, `handler`, {
+    const handlerLamba = new NodejsFunction(this, `ValtsuBot`, {
       //timeout: Duration.seconds(5),
       //memorySize: 256,
-      entry: 'src/handler.ts',
+      entry: 'src/valtsu.ts',
       runtime: Runtime.NODEJS_18_X,
-      handler: "handler",
+      handler: "main",
     });
 
     // Allow lambda function to access param store
@@ -29,7 +29,7 @@ export class CommandLambdasStack extends Stack {
     handlerLamba.addToRolePolicy(ssmPolicy)
 
     api.root
-      .resourceForPath('/handler')
+      .resourceForPath('/handle')
       .addMethod("POST", new LambdaIntegration(handlerLamba))
   }
 }

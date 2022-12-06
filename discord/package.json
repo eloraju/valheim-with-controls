@@ -9,7 +9,8 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk:synth": "cdk synth",
-    "updateParams": "export $(cat bin/helpers/.env | sed -r 's/\\r//' | xargs) && sh bin/helpers/updateParamStore.sh"
+    "updateParams": "export $(cat .env | sed -r 's/\\r//' | xargs) && sh bin/helpers/updateParamStore.sh",
+    "updateCommands": "ts-node bin/helpers/updateCommands.ts"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.109",
@@ -27,8 +28,8 @@
     "@aws-sdk/client-ssm": "^3.224.0",
     "aws-cdk-lib": "2.53.0",
     "aws-lambda": "^1.0.7",
+    "axios": "^1.2.1",
     "constructs": "^10.0.0",
-    "discord-interactions": "^3.2.0",
-    "dotenv": "^16.0.3"
+    "discord-interactions": "^3.2.0"
   }
 }

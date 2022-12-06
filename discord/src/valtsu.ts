@@ -1,23 +1,24 @@
-import {verifyKey} from "discord-interactions";
+import {InteractionType, verifyKey} from "discord-interactions";
 import {APIGatewayEvent, APIGatewayProxyResult, Context} from "aws-lambda";
 import {getParam} from "./helpers/getParams";
-import {getCommandHandler} from "./getCommandHandler";
-import {DiscordInteraction} from "./types";
+import {DiscordInteraction, InteractionHandler} from "./types";
 import {Logger} from "./helpers/logger";
-
+import commands from "./commands";
+import {notFoundHandler, pingHandler} from "./commands/commandlessHandlers";
 
 const logger = new Logger();
 
-function respond(body: any, statusCode = 200) {
-  const type = typeof body === "string" ? "text/plain" : "application/json";
-  const response = {
-    statusCode,
-    headers: {"Content-Type": type},
-    body: JSON.stringify(body)
-  };
-  logger.log(`Response: ${JSON.stringify(response)}`)
-  logger.end();
-  return response;
+export function getCommandHandler(interaction:DiscordInteraction): InteractionHandler {
+  const interactionName = interaction.data?.name || "";
+  if(interactionName && interaction.type === InteractionType.APPLICATION_COMMAND) {
+    const command = commands.get(interactionName);
+    if(command === undefined) {
+      return notFoundHandler;
+    }
+    return command.handler;
+  }
+
+  return pingHandler;
 }
 
 async function verifyRequest(event: APIGatewayEvent): Promise<boolean> {
@@ -33,7 +34,19 @@ async function verifyRequest(event: APIGatewayEvent): Promise<boolean> {
   return verifyKey(event.body || "", signature, timestamp, CLIENT_PUBLIC_KEY);
 }
 
-export async function handler(event: APIGatewayEvent, _context: Context): Promise<APIGatewayProxyResult>{
+function respond(body: any, statusCode = 200) {
+  const type = typeof body === "string" ? "text/plain" : "application/json";
+  const response = {
+    statusCode,
+    headers: {"Content-Type": type},
+    body: JSON.stringify(body)
+  };
+  logger.log(`Response: ${JSON.stringify(response)}`)
+  logger.end();
+  return response;
+}
+
+export async function main(event: APIGatewayEvent, _context: Context): Promise<APIGatewayProxyResult>{
   logger.start();
   logger.log(`Request: ${JSON.stringify(event)}`)
 
@@ -53,7 +66,7 @@ export async function handler(event: APIGatewayEvent, _context: Context): Promis
 
   const handlerFunction = getCommandHandler(interaction);
   logger.log(`Handler "${handlerFunction.name}" found for interaction ${interaction.data?.name}`)
-  const result = handlerFunction(interaction);
+  const result = await handlerFunction(interaction);
 
   return respond(result)
 }
