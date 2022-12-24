@@ -15,7 +15,7 @@ export class CommandLambdasStack extends Stack {
 
     const handlerLamba = new NodejsFunction(this, `ValtsuBot`, {
       //timeout: Duration.seconds(5),
-      //memorySize: 256,
+      memorySize: 1024,
       entry: 'src/valtsu.ts',
       runtime: Runtime.NODEJS_18_X,
       handler: "main",
