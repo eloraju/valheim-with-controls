@@ -31,12 +31,12 @@ export type None = {
 
 export type Maybe<Value> = Some<Value> | None
 
-export type InterractionAndHandler = {
+export type InteractionAndHandler = {
     interaction: DiscordInteraction,
     handler: InteractionHandler
 }
 
 export type RequestValidationResult = Success<APIGatewayEvent> | Failure
 export type RequestParseResult = Success<DiscordInteraction> | Failure
-export type HandlerSelectionResult = Success<InterractionAndHandler> | Failure
+export type HandlerSelectionResult = Success<InteractionAndHandler> | Failure
 export type HandlerExecutionResult = Success<DiscordInteractionResponse> | Failure

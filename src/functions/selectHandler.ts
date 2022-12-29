@@ -2,7 +2,7 @@ import {DiscordInteraction, InteractionHandler} from "../types";
 import {InteractionType} from "discord-interactions";
 import commands from "../commands";
 import {notFoundHandler, pingHandler} from "../commands/commandlessHandlers";
-import {HandlerSelectionResult, InterractionAndHandler, Result} from "../types/types";
+import {HandlerSelectionResult, InteractionAndHandler, Result} from "../types/types";
 import {succeedWith} from "../types/type.helpers";
 
 export function selectHandler(interactionResult: Result<DiscordInteraction, string>): HandlerSelectionResult {
