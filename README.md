@@ -31,3 +31,8 @@ Welp. Now it works. Just had to destroy and redeploy the whole thing. I call thi
 Did quite a lot of refactoring and started to work on a script that updates the commands to discords. Gribe also
 pointed out that lambda processing power is tied to the memory! I'll try to run the lambdas with a bit more memory
 to see if I can reduce the runtime.
+
+Did a really large refactor to the whole codebase. Almost happy with it. I'm trying to take a more functional
+approach to the whole thing and at least looking at the `main.ts` makes me happier. Now there's just one pipeline that
+gets called and maic happens. Still haven't been able to test it though... Builds are failing due to some axios/bluebird
+d.ts errors...

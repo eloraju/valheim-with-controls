@@ -1,6 +1,6 @@
 import {DiscordCommandType, DiscordCommandWithHandler, DiscordInteraction, DiscordInteractionResponse,} from "../types";
 import {InteractionResponseType} from "discord-interactions";
-import axios from '../helpers/axiosIns';
+import {instance as axios} from '../helpers/axiosIns';
 
 export const startCommand: DiscordCommandWithHandler = {
   name: "start",
